@@ -116,7 +116,7 @@ const About = () => {
                     color: '#333',
                   },
                 }}
-                href="/assets/my-cv.pdf"
+                href="/Azizurresume.pdf"
                 download
               >
                 Download Resume
