@@ -1,7 +1,26 @@
 import React, { useState, useRef } from 'react';
-import { Box, Typography, Button, TextField, Grid, Container, Fade } from '@mui/material';
+import { Box, Typography, Button, TextField, Grid, Container, Fade, Paper } from '@mui/material';
 import { useInView } from 'react-intersection-observer'; // Import useInView for scroll trigger
 import emailjs from '@emailjs/browser';
+
+// Define the contact data for Phone, Email, and Address
+const contactDetails = [
+  {
+    icon: '📞', // You can replace this with actual icon paths
+    title: 'Phone',
+    details: ['+1 347-691-0612'],
+  },
+  {
+    icon: '✉️', // You can replace this with actual icon paths
+    title: 'Email',
+    details: ['Rahmanazizur946@gmail.com', 'Azizur.rahman59@gmail.cuny.edu'],
+  },
+  {
+    icon: '📍', // You can replace this with actual icon paths
+    title: 'Address',
+    details: ['United States of America, New York, Bronx'],
+  },
+];
 
 const Contact = () => {
   const form = useRef();
@@ -38,7 +57,7 @@ const Contact = () => {
     >
       <Fade in={inView} timeout={1000}>
         <Typography variant="h2" sx={{ fontWeight: 'bold', mb: { xs: 4, md: 6 }, fontSize: { xs: '2.5rem', md: '3rem' } }}>
-          <span style={{ color: '#e53935' }}>Contact</span> Me
+          <span style={{ color: '#e53935' }}>Let's</span> Connect!
         </Typography>
       </Fade>
 
@@ -104,6 +123,38 @@ const Contact = () => {
             </form>
           </Fade>
         </Grid>
+      </Grid>
+
+      {/* Contact Details Section */}
+      <Grid container spacing={4} justifyContent="center" sx={{ mt: 6 }}>
+        {contactDetails.map((detail, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Fade in={inView} timeout={1500 + (index * 300)}>
+              <Paper 
+                elevation={3} 
+                sx={{ 
+                  p: 3, 
+                  textAlign: 'center', 
+                  borderRadius: 3,
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  justifyContent: 'center', 
+                  minHeight: '200px' // Ensures all boxes are the same height
+                }}
+              >
+                <Typography variant="h4" sx={{ fontSize: '3rem' }}>{detail.icon}</Typography>
+                <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 1 }}>
+                  {detail.title}
+                </Typography>
+                {detail.details.map((info, idx) => (
+                  <Typography key={idx} sx={{ fontSize: '1rem', mb: 0.5 }}>
+                    {info}
+                  </Typography>
+                ))}
+              </Paper>
+            </Fade>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );
