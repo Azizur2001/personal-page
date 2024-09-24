@@ -12,6 +12,10 @@ import NodeIcon from '../images/node.png';
 import SQLIcon from '../images/sql.png';
 import FirebaseIcon from '../images/firebase.png';
 import GitIcon from '../images/Git.png';
+import PineconeIcon from '../images/pinecone.png';
+import NextJSIcon from '../images/next.png';
+
+
 
 // Array of skills with icons and labels
 const skills = [
@@ -20,13 +24,14 @@ const skills = [
   { name: "Python", icon: PythonIcon },
   { name: "React", icon: ReactIcon },
   { name: "Material UI", icon: MaterialUIIcon },
-  { name: "HTML", icon: HTMLIcon },
-  { name: "CSS", icon: CSSIcon },
+  { name: "Pinecone", icon: PineconeIcon },
+  { name: "NextJS", icon: NextJSIcon },
   { name: "MongoDB", icon: MongoDBIcon },
   { name: "Node", icon: NodeIcon },
   { name: "SQL", icon: SQLIcon },
   { name: "Firebase", icon: FirebaseIcon },
-  { name: "Git", icon: GitIcon },
+  { name: "Git", icon: GitIcon }
+
 ];
 
 const Skills = () => {
