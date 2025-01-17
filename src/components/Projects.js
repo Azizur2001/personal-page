@@ -24,6 +24,13 @@ const projects = [
       "Developed a customer churn prediction system using machine learning models with Python, GROQ, and OpenAI. Trained multiple models, including XGBoost, Random Forest, K-Nearest Neighbors, and Naive Bayes, to predict customer churn based on historical data. Deployed the system via Streamlit, integrating an LLM to generate personalized retention emails based on the predictions.",
     githubLink: "https://github.com/Azizur2001/customer-churnpredictor",
   },
+  {
+    title: "Project 3",
+    subtitle: "Pentagram",
+    description:
+      "This is an AI-powered image generation full-stack application using Next.js, Stable Diffusion, and Modal, with Fast API to create API backend hooks to the python code, enabling users to transform text prompts into high-quality images, in a matter of seconds.",
+    githubLink: "https://github.com/Azizur2001/Pentagram",
+  },
 ];
 
 const Projects = () => {
