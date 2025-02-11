@@ -25,7 +25,7 @@ const projects = [
     githubLink: "https://github.com/Azizur2001/customer-churnpredictor",
   },
   {
-    title: "Project 3",
+    title: "Project 4",
     subtitle: "Pentagram",
     description:
       "This is an AI-powered image generation full-stack application using Next.js, Stable Diffusion, and Modal, with Fast API to create API backend hooks to the python code, enabling users to transform text prompts into high-quality images, in a matter of seconds.",

@@ -118,7 +118,7 @@ const About = () => {
                 </Box>
               </Typography>
               <Typography variant="h5" sx={{ fontWeight: "bold", my: 2 }}>
-                Front End Developer
+                Software Engineer
               </Typography>
               <Typography
                 variant="body1"
